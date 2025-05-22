@@ -1,0 +1,19 @@
+[project]
+name = "o32-dolgorocnaoskrbaslovenije-maj25"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "milos.pantos",email = "milos.pantos@infinitas.si"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "o32_dolgorocnaoskrbaslovenije_maj25", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
