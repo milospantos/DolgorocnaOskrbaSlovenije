@@ -20,7 +20,7 @@ datoteka = "Projekcije_raba_EE_IJS_v2_ag.xlsx"
 podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='RabaEE',skiprows=23,usecols="B:AB",nrows=10 )
 podatki.set_index(podatki.columns[0], inplace=True)
 
-datoteka2 = "ELES_povprecje3.xlsx"
+datoteka2 = "ELES_povprecje4.xlsx"
 podatki2 = pd.read_excel(PATH +"\\"+ datoteka2)
 podatki2.set_index(podatki2.columns[0], inplace=True)
 podatki2["leto"] =podatki2.index.year

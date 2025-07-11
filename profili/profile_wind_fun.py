@@ -24,7 +24,7 @@ def profile_wind(scenarij):
     podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='Razprsena_proizvodnja_OVE',skiprows=skiprow ,usecols="B:AB",nrows=9)
     podatki.set_index(podatki.columns[0], inplace=True)
 
-    datoteka2 = "wind_normalized.xlsx"
+    datoteka2 = "wind_normalized_si.xlsx"
     podatki2 = pd.read_excel(PATH +"\\"+ datoteka2)
     podatki2.set_index(podatki2.columns[0], inplace=True)
 

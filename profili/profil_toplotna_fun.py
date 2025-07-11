@@ -26,7 +26,7 @@ def profil_toplotna():
     PATH=os.path.abspath(os.getcwd())
 
     datoteka = "Projekcije_raba_EE_IJS_v2_ag.xlsx"
-    podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='PodatkiONapravah',skiprows=82 ,usecols="F:AG",nrows=8 )
+    podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='PodatkiONapravah',skiprows=82 ,usecols="F:AH",nrows=8 )
     podatki = podatki.drop(podatki.columns[1], axis=1)
     podatki.set_index(podatki.columns[0], inplace=True)
     podatki = podatki.round(0)

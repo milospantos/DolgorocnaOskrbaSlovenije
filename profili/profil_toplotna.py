@@ -6,8 +6,8 @@ from read_when2heat import branje_when2heat
 
 
 ################vhodni podatki########################
-zacetno_leto = 2025
-koncno_leto = 2050
+zacetno_leto = 2024
+koncno_leto = 2024
 procent_flor_H = 20
 procent_radidator_H = 80
 percent_space_H = 80
@@ -22,7 +22,7 @@ percent_COM_space = 80
 PATH=os.path.abspath(os.getcwd())
 
 datoteka = "Projekcije_raba_EE_IJS_v2_ag.xlsx"
-podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='PodatkiONapravah',skiprows=82 ,usecols="F:AG",nrows=8 )
+podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='PodatkiONapravah',skiprows=82 ,usecols="F:AH",nrows=8 )
 podatki = podatki.drop(podatki.columns[1], axis=1)
 podatki.set_index(podatki.columns[0], inplace=True)
 podatki = podatki.round(0)
@@ -207,4 +207,7 @@ time_series_per_year_SANITARNE = pd.concat(time_series_per_year_SANITARNE_list)
 
 combined_profiles = time_series_per_year_comertial + time_series_per_year_GSHP + time_series_per_year_ASHP + time_series_per_year_SANITARNE
 combined_profiles.index.name = "Časovna značka"
-print(combined_profiles)
+print(combined_profiles.sum())
+
+# output_path = PATH + "\\2024_HP.xlsx"
+# combined_profiles.to_excel(output_path)

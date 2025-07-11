@@ -20,10 +20,10 @@ def profil_STPE_BIOPLIN(scenarij):
     #################################################
 
     datoteka = "Projekcije_raba_EE_IJS_v2_ag.xlsx"
-    podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='Razprsena_proizvodnja_OVE',skiprows=skiprow ,usecols="B:AB",nrows=10 )
+    podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='Razprsena_proizvodnja_OVE',skiprows=skiprow ,usecols="B:AB",nrows=10)
     podatki.set_index(podatki.columns[0], inplace=True)
 
-    datoteka2 = "profile_biomass_waste_norm.xlsx"
+    datoteka2 = "profile_biomass_waste_norm_2.xlsx"
     podatki2 = pd.read_excel(PATH +"\\"+ datoteka2)
     podatki2.set_index(podatki2.columns[0], inplace=True)
 

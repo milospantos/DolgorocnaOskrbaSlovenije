@@ -30,7 +30,7 @@ def get_season(ts):
 PATH=os.path.abspath(os.getcwd())
 
 datoteka = "Projekcije_raba_EE_IJS_v2_ag.xlsx"
-podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='PodatkiONapravah',skiprows=66,usecols="F:AL",nrows=13 )
+podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='PodatkiONapravah',skiprows=66,usecols="F:AM",nrows=13 )
 podatki = podatki.drop(podatki.columns[1], axis=1)
 podatki.set_index(podatki.columns[0], inplace=True)
 podatki = podatki.round(0)
@@ -79,8 +79,8 @@ podatki = podatki.round(0)
 
 ########################## NAPREDNI PROFIL#########
 ####napredni
-zacetno_leto_n = 2025
-koncno_leto_n = 2050
+zacetno_leto_n = 2024
+koncno_leto_n = 2024
         ############# AVTOMOBILI DOMAČI
 procent_vikend = 30          # nam pove koliko flote se bo polnilo tekom vikenda
 procent_delavnik = 100 - procent_vikend     # nam pove koliko flote se bo polnilo preko tedna
@@ -538,8 +538,8 @@ combined_profiles.index.name = "Časovna značka"
 
 
 
-
-
+# output_path = PATH + "\\2024_EV.xlsx"
+# combined_profiles.to_excel(output_path)
 
 # data_to_plot = time_series_per_year_avto.iloc[24*200:24*214]
 # #another = veter_profil_au.iloc[24*200:24*230]

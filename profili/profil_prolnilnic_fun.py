@@ -41,7 +41,7 @@ def profil_polnilnic():
     PATH=os.path.abspath(os.getcwd())
 
     datoteka = "Projekcije_raba_EE_IJS_v2_ag.xlsx"
-    podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='PodatkiONapravah',skiprows=66,usecols="F:AL",nrows=13 )
+    podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='PodatkiONapravah',skiprows=66,usecols="F:AM",nrows=13 )
     podatki = podatki.drop(podatki.columns[1], axis=1)
     podatki.set_index(podatki.columns[0], inplace=True)
     podatki = podatki.round(0)

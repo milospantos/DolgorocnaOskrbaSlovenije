@@ -9,10 +9,10 @@ def profil_odjema(scenarij):
 
     PATH=os.path.abspath(os.getcwd())
     datoteka = "Projekcije_raba_EE_IJS_v2_ag.xlsx"
-    podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='RabaEE',skiprows=23,usecols="B:AB",nrows=12)
+    podatki = pd.read_excel(PATH +"\\"+ datoteka, sheet_name='RabaEE',skiprows=23,usecols="B:AB",nrows=8)
     podatki.set_index(podatki.columns[0], inplace=True)
 
-    datoteka2 = "ELES_povprecje3.xlsx"
+    datoteka2 = "ELES_povprecje5.xlsx"
 
     podatki2 = pd.read_excel(PATH +"\\"+ datoteka2)
     podatki2.set_index(podatki2.columns[0], inplace=True)
@@ -23,14 +23,13 @@ def profil_odjema(scenarij):
 
     zacetno_leto = 2025
     koncno_leto = 2050
-    scenarij = "DUOVE"
+
 
     if scenarij =="OU":
-        vrstica = "Razlika OU  [GWh]"
-    elif scenarij == "DUJE":
-        vrstica = "Razlika DUJE  [GWh]"
-    elif scenarij == "DUOVE":
-        vrstica = "Razlika DUOVE  [GWh]"
+        vrstica = "Razlika koncna raba OU"
+    elif scenarij == "DU":
+        vrstica = "Razlika koncna raba DU"
+
 
 
     for year in range(zacetno_leto, koncno_leto + 1):

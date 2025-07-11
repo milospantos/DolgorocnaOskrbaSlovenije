@@ -5,10 +5,6 @@ from calendar import isleap
 
 
 PATH=os.path.abspath(os.getcwd())
-################vhodni podatki########################
-
-zacetno_leto = 2025
-koncno_leto = 2050
 
 datoteka21 = "ELES_2023.xlsx"
 podatki21 = pd.read_excel(PATH +"\\"+ datoteka21)
